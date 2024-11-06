@@ -27,3 +27,8 @@ fi
 
 # インストールが完了したことを確認
 echo "install complete"
+
+# ログファイルを出力
+echo "Node.js: $(node -v)" >> $LOG_FILE
+echo "Yarn: $(yarn -v)" >> $LOG_FILE
+echo "Slidev: $(slidev --version)" >> $LOG_FILE

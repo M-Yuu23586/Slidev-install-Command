@@ -1,23 +1,23 @@
 # check.ps1
-# This script checks if Slidev and its related libraries are installed
+# このスクリプトはSlidevとその関連ライブラリがインストールされているかを確認します
 
-# Function to check if a module is installed
+# モジュールがインストールされているかを確認する関数
 function Check-Module {
     param (
         [string]$moduleName
     )
     $module = Get-Module -ListAvailable -Name $moduleName
     if ($module) {
-        Write-Output "$moduleName is installed."
+        Write-Output "$moduleName はインストールされています。"
     } else {
-        Write-Output "$moduleName is not installed."
+        Write-Output "$moduleName はインストールされていません。"
     }
 }
 
-# List of Slidev related libraries
+# Slidev関連ライブラリのリスト
 $modules = @("slidev", "slidev-theme", "slidev-cli")
 
-# Check each module
+# 各モジュールを確認
 foreach ($module in $modules) {
     Check-Module -moduleName $module
 }

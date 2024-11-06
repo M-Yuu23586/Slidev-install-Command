@@ -30,3 +30,8 @@ if ! command -v yarn &> /dev/null; then
 else
     echo "yarn is already installed. Version: $(yarn -v)"
 fi
+
+# ログファイルを出力
+echo "Node.js: $(node -v)" >> $LOG_FILE
+echo "npm: $(npm -v)" >> $LOG_FILE
+echo "yarn: $(yarn -v)" >> $LOG_FILE
