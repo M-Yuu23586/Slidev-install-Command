@@ -1,5 +1,3 @@
-# すでにインストールされてるなら、インストールしないコマンド
-
 # Node.jsのバージョン確認
 if ! command -v node &> /dev/null
 then
