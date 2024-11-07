@@ -14,6 +14,14 @@ function Check-Module {
     }
 }
 
+# Node.jsがインストールされているかを確認
+$node = Get-Command -Name node
+if ($node) {
+    Write-Output "Node.js はインストールされています。"
+} else {
+    Write-Output "Node.js はインストールされていません。"
+}
+
 # Slidev関連ライブラリのリスト
 $modules = @("slidev", "slidev-theme", "slidev-cli")
 
@@ -21,3 +29,8 @@ $modules = @("slidev", "slidev-theme", "slidev-cli")
 foreach ($module in $modules) {
     Check-Module -moduleName $module
 }
+
+# ログファイルを出力
+$modules | ForEach-Object {
+    Check-Module -moduleName $_
+} | Out-File -FilePath "check.log"
