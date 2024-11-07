@@ -22,6 +22,9 @@ if ($node) {
     Write-Output "Node.js はインストールされていません。"
 }
 
+# Chocolateyがインストールされているかを確認
+$choco = Get-Command -Name choco
+
 # Slidev関連ライブラリのリスト
 $modules = @("slidev", "slidev-theme", "slidev-cli")
 
