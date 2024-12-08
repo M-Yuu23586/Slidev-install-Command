@@ -62,8 +62,7 @@ cd Slidev-install-Command
 2. プロジェクトのディレクトリに移動します。
 3. 以下のコマンドを実行します。
   ```powershell
-  Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-  ./install.ps1
+  Set-ExecutionPolicy RemoteSigned -Scope CurrentUser && ./install.ps1
   ```
 
 ### Mac
@@ -80,8 +79,7 @@ cd Slidev-install-Command
 2. プロジェクトのディレクトリに移動します。
 3. 以下のコマンドを実行します。
   ```sh
-  chmod +x install.bash
-  ./install.bash
+  chmod +x install.bash && ./install.bash
   ```
 ## オプション
 利用可能なオプションは以下のとおりです。
